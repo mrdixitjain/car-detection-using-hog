@@ -1,0 +1,21 @@
+To run this, you need the following modules :
+os, math, glob, cv2, deque, numpy, matplotlib, moviepy, time, sklearn, skimage, scipy
+pickle
+
+If you have these on your system, than you are ready to run the code.
+
+also, download the dataset from below link :
+	link for testing video : shorturl.at/rvDHM
+	link for images : http://www.gti.ssr.upm.es/data/Vehicle_database.html
+
+	this has images to train svc, and video for test.
+
+to run the program : python3 main.py
+
+
+Some Tips and Tricks
+
+    If you are stuck with long processing time while running pipeline on video, please try reducing windows first.
+    If you are still stuck with long processing time try reducing the number of features extracted.
+    If you have a test set of say 10,000 images and your feature size is 8000, SVM will not perform upto the mark even if the accuracy on the test set is above 95%. Use SVM with ‘rbf’ kernel or reduce features.
+    If it still takes long time for the pipeline to run, try skipping one half or two thirds of the frames. It will speed up. Remember by skipping frames I mean skipping the processing of frames and setting the refined windows of that frame to rectangles gathered from previous 15 frames stored in some data structure.
